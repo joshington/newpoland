@@ -1,65 +1,104 @@
-import Image from "next/image";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+    <main
+      dangerouslySetInnerHTML={{
+        __html: `
+<!-- Top Info Bar -->
+<div class="header-now">
+  <ul class="menu-now">
+    <li><i class="fa fa-twitter"></i></li>
+    <li><i class="fa fa-facebook"></i></li>
+    <li><i class="fa fa-instagram"></i></li>
+    <li><i class="fa fa-youtube"></i></li>
+    <li>Have any questions?</li>
+    <li>info@polandconsulateug.com</li>
+    <li>+256 701 439003</li>
+    <li>+256 780 168690</li>
+  </ul>
+</div>
+
+<header>
+  <div class="main-navigation">
+    <div class="logo-section">
+      <div class="polflag">
+        <img src="/images/polflag.png" alt="pol_logo" />
+      </div>
+
+      <div class="mobile-socials">
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+      </div>
+
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
+
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="/">Home</a></li>
+      <li><a href="/visas">Visas & Permits</a></li>
+      <li><a href="/consulate">Consulate</a></li>
+      <li><a href="#">Citizen Services</a></li>
+      <li><a href="/gallery">Gallery</a></li>
+      <li><a href="#">Business</a></li>
+      <li><a href="#">Cultural Exchange</a></li>
+      <li><a href="/news">News & Events</a></li>
+      <li class="polflag">
+        <img src="/images/euflag.png" alt="eu_logo" />
+      </li>
+    </ul>
+  </div>
+</header>
+
+<div class="con-head">
+  <h5>The Honorary Consulate of the Republic of Poland in Uganda</h5>
+</div>
+
+<div class="nana-new">
+  <div class="nan">
+    <img src="/images/pres1.jpeg" />
+    <h4>H.E President Andrzej Sebastian Duda</h4>
+    <h6>President of the Republic of Poland</h6>
+  </div>
+
+  <div class="nan">
+    <img src="/images/amb.jpeg" />
+    <h4>H.E Amb Mirosław Gojdź</h4>
+    <h6>Permanent Representative of Poland to UN Programs & Office in Nairobi</h6>
+  </div>
+
+  <div class="nana1-new">
+    <img src="/images/ereal.jpg" />
+    <h4>Prof. Ephraim Kamuntu</h4>
+    <h6>Hon. Consul of Republic of Poland in Uganda</h6>
+  </div>
+</div>
+
+<div class="addiv">
+  <marquee>
+    <strong>Important:</strong> Please note that the Poland consulate in Uganda
+    does not handle visa processing.
+    <a href="https://www.gov.pl/web/kenya/visas"> click for details</a>
+  </marquee>
+</div>
+
+<div class="sectors">
+  <h2 class="section-title">Our Services</h2>
+</div>
+
+<div class="mybottom">
+  <div class="mybottom1">
+    <h5>Consulate of Poland in Uganda</h5>
+    <img src="/images/polflag.png" />
+  </div>
+</div>
+        `,
+      }}
+    />
   );
 }
