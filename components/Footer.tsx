@@ -14,7 +14,7 @@ export default function Footer() {
         <h4>Office Hours</h4>
         <p>Mon–Thu: 9:00 – 16:30</p>
         <p>Fri: 9:00 – 15:00</p>
-        <p>Location: Las Vegas Garden Hotel, Bunga</p>
+        <p>Location: Las Vegas Garden Hotel, Bunga(Hamis Kiggundu Rd)</p>
       </div>
     </footer>
   );
