@@ -2,28 +2,29 @@
 
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="main-navigation">
-      <div className="logo">Consulate of Poland 🇵🇱</div>
+    <header className="header">
+      <div className="header-inner">
+        <img src="/images/myflag.jpeg" className="flag" />
 
-      <div className="hamburger" onClick={() => setOpen(!open)}>
-        <span />
-        <span />
-        <span />
+        <nav className={`nav ${open ? "open" : ""}`}>
+          <Link href="/">Home</Link>
+          <Link href="/visas">Visas</Link>
+          <Link href="/services">Consulate Services</Link>
+          <Link href="/gallery">Gallery</Link>
+          <Link href="/news">News</Link>
+        </nav>
+
+        <img src="/images/euflag.png" className="flag" />
+
+        <button className="hamburger" onClick={() => setOpen(!open)}>☰</button>
       </div>
-
-      <ul className={`nav-menu ${open ? "active" : ""}`}>
-        <li><Link href="/">Home</Link></li>
-        <li><Link href="/visas">Visas</Link></li>
-        <li><Link href="/consulate">Consulate</Link></li>
-        <li><Link href="/news">News</Link></li>
-      </ul>
     </header>
   );
 }
