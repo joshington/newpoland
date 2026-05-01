@@ -1,152 +1,102 @@
 
 
+// app/visas/page.tsx
 "use client";
 
-import { useEffect } from "react";
 import Link from "next/link";
 
 export default function VisasPage() {
-  useEffect(() => {
-    const hamburger = document.getElementById("hamburger");
-    const navMenu = document.getElementById("navMenu");
-
-    if (!hamburger || !navMenu) return;
-
-    const toggleMenu = () => {
-      hamburger.classList.toggle("active");
-      navMenu.classList.toggle("active");
-    };
-
-    hamburger.addEventListener("click", toggleMenu);
-
-    const navLinks = document.querySelectorAll(".nav-menu a");
-    navLinks.forEach(link =>
-      link.addEventListener("click", () => {
-        hamburger.classList.remove("active");
-        navMenu.classList.remove("active");
-      })
-    );
-
-    const handleScroll = () => {
-      const header = document.querySelector(".main-navigation") as HTMLElement | null;
-      if (!header) return;
-
-      if (window.scrollY > 100) {
-        header.style.backgroundColor = "rgba(255,255,255,0.95)";
-        header.style.backdropFilter = "blur(10px)";
-      } else {
-        header.style.backgroundColor = "white";
-        header.style.backdropFilter = "none";
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      hamburger.removeEventListener("click", toggleMenu);
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
     <>
-      {/* HEADER */}
-      {/*
-      <header<header>
-        <div className="main-navigation">
-          <div className="logo-section">
-            <div className="polflag">
-              <img src="/images/polflag.png" alt="Poland Flag" />
-            </div>
-
-            <div className="mobile-socials">
-              <a href="#"><i className="fa fa-twitter" /></a>
-              <a href="#"><i className="fa fa-facebook" /></a>
-              <a href="#"><i className="fa fa-instagram" /></a>
-              <a href="#"><i className="fa fa-youtube" /></a>
-            </div>
-
-            <div className="hamburger" id="hamburger">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </div>
-
-          <ul className="nav-menu" id="navMenu">
-            <li><Link href="/">Home</Link></li>
-            <li><Link href="/visas">Visas & Permits</Link></li>
-            <li><Link href="/consulate">Consulate</Link></li>
-            <li><Link href="/gallery">Gallery</Link></li>
-            <li><Link href="/news">News & Events</Link></li>
-            <li className="polflag">
-              <img src="/images/euflag.png" alt="EU Flag" />
-            </li>
-          </ul>
+      <div className="page-header">
+        <div className="container">
+          <h1>Visas & Permits</h1>
+          <p>Your guide to traveling, working, and studying in Poland</p>
         </div>
-      </header>
-      */}
-      
-
-      {/* VISAS HEADER
-      <div className="visadiv">
-        <h4>Visas & Permits</h4>
       </div>
-      
-      */}
-      
 
-      {/* MAIN CONTENT */}
       <div className="visa-content">
-        <div className="visatext">
-          <p>
-            The purpose of your intended travel and other facts will determine
-            what type of visa is required under{" "}
-            <strong>Poland immigration law</strong>.
-          </p>
+        <div className="container">
+          <div className="visa-info-grid">
+            <div className="visa-text">
+              <p className="lead-text">
+                The purpose of your intended travel and other facts will determine
+                what type of visa is required under <strong>Poland immigration law</strong>.
+              </p>
 
-          <div className="important-notice">
-            <h5>Important Notice</h5>
-            <p>
-              <strong>The Poland Consulate in Uganda</strong> does not process
-              visas. Visa processing is handled by the{" "}
-              <strong>Poland Embassy in Nairobi</strong>.
-            </p>
-          </div>
+              <div className="important-notice">
+                <h5>📢 Important Notice</h5>
+                <p>
+                  <strong>The Poland Consulate in Uganda</strong> does not process
+                  visas. Visa processing is handled by the{" "}
+                  <strong>Poland Embassy in Nairobi, Kenya</strong>.
+                </p>
+              </div>
 
-          <div className="buttondiv">
-            <a
-              href="https://www.gov.pl/web/kenya/visas"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button>Details about visa application</button>
-            </a>
+              <div className="visa-types">
+                <h3>Types of Visas</h3>
+                <ul>
+                  <li><strong>Schengen Visa (Type C)</strong> - For short stays up to 90 days (tourism, business, family visits)</li>
+                  <li><strong>National Visa (Type D)</strong> - For long stays over 90 days (work, study, family reunification)</li>
+                  <li><strong>Airport Transit Visa (ATV)</strong> - For passing through international transit areas</li>
+                </ul>
+              </div>
+
+              <div className="buttondiv">
+                <a
+                  href="https://www.gov.pl/web/kenya/visas"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button>Apply for Visa →</button>
+                </a>
+              </div>
+            </div>
+
+            <div className="visa-sidebar">
+              <div className="info-card">
+                <h4>Required Documents</h4>
+                <ul>
+                  <li>Valid passport (min. 3 months beyond stay)</li>
+                  <li>Completed visa application form</li>
+                  <li>Recent passport-size photographs</li>
+                  <li>Travel insurance (min. €30,000 coverage)</li>
+                  <li>Flight itinerary & accommodation proof</li>
+                  <li>Financial means proof</li>
+                  <li>Visa fee payment receipt</li>
+                </ul>
+              </div>
+              <div className="info-card">
+                <h4>Processing Time</h4>
+                <p>Standard processing takes approximately <strong>15 calendar days</strong>. Apply well in advance of your intended travel date.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* SERVICES */}
       <section className="sectors">
-        <div className="secdiv">
-          {[
-            ["VISIT POLAND", "Tourism, culture, and travel opportunities."],
-            ["WORK IN POLAND", "Employment and work permit guidance."],
-            ["STUDY IN POLAND", "Universities and academic programs."],
-            ["DOING BUSINESS", "Trade and investment opportunities."],
-            ["VISAS & PERMITS", "Visa requirements and documentation."],
-            ["DIPLOMACY", "Bilateral and cultural relations."]
-          ].map(([title, text], i) => (
-            <div className="sec" key={i}>
-              <h5>{title}</h5>
-              <hr className="newhr" />
-              <p>{text}</p>
-            </div>
-          ))}
+        <div className="container">
+          <h2 className="section-title">Explore Poland</h2>
+          <div className="secdiv">
+            {[
+              { title: "VISIT POLAND", desc: "Tourism, culture, and travel opportunities.", icon: "🏞️" },
+              { title: "WORK IN POLAND", desc: "Employment and work permit guidance.", icon: "💼" },
+              { title: "STUDY IN POLAND", desc: "Universities and academic programs.", icon: "🎓" },
+              { title: "DOING BUSINESS", desc: "Trade and investment opportunities.", icon: "📈" },
+              { title: "VISAS & PERMITS", desc: "Visa requirements and documentation.", icon: "🛂" },
+              { title: "DIPLOMACY", desc: "Bilateral and cultural relations.", icon: "🤝" }
+            ].map((service, idx) => (
+              <div className="sec" key={idx}>
+                <div className="sec-icon">{service.icon}</div>
+                <h5>{service.title}</h5>
+                <hr className="newhr" />
+                <p>{service.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
-
-     
     </>
   );
 }
