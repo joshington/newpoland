@@ -58,12 +58,9 @@ export default function VisasPage() {
                 <h4>Required Documents</h4>
                 <ul>
                   <li>Valid passport (min. 3 months beyond stay)</li>
-                  <li>Completed visa application form</li>
-                  <li>Recent passport-size photographs</li>
-                  <li>Travel insurance (min. €30,000 coverage)</li>
-                  <li>Flight itinerary & accommodation proof</li>
-                  <li>Financial means proof</li>
-                  <li>Visa fee payment receipt</li>
+                  
+                  <li>Reach out to the consular incharge for more details</li>
+                  
                 </ul>
               </div>
               <div className="info-card">
