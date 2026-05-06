@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="footer-section">
             <h4>Poland Consulate in Uganda</h4>
             <p>Honorary Consulate of the Republic of Poland</p>
-            <p>Plot 23B, Lumumba Avenue<br />Kampala, Uganda</p>
+            <p>LasVegas Hotel, Hamis Kiggundu Rd, Bunga Kawuku<br />Kampala, Uganda</p>
           </div>
           <div className="footer-section">
             <h4>Quick Links</h4>
