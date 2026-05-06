@@ -25,7 +25,7 @@ export default function ConsulatePage() {
               />
             </div>
             <div className="address-info">
-              <p><strong>📍 Address:</strong> Plot 23B, Lumumba Avenue, Kampala, Uganda</p>
+              <p><strong>📍 Address:</strong>LasVegas Hotel, Hamis Kiggundu Rd, Bunga Kawuku, Uganda</p>
               <p><strong>📞 Phone:</strong> +256 701 439003</p>
               <p><strong>✉️ Email:</strong> info@polandconsulateug.com</p>
             </div>
