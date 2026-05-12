@@ -7,6 +7,9 @@ import Footer from "@/components/Footer";
 export const metadata = {
   title: "Consulate of Poland in Uganda",
   description: "Official website of the Consulate of the Republic of Poland in Uganda",
+  icons: {
+    icon: "/poland.png",
+  }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -18,5 +21,5 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
       </body>
     </html>
-  );
+  );  
 }
